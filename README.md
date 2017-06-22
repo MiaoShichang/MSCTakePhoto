@@ -12,7 +12,7 @@
 <img src="https://github.com/MiaoShichang/DemoImage/blob/master/MSCTakePhoto/id_face.jpg" width="30%" />
 
 
-##身份证反面界面
+## 身份证反面界面
 
 <img src="https://github.com/MiaoShichang/DemoImage/blob/master/MSCTakePhoto/id_back.jpg" width="30%" />
 
