@@ -30,6 +30,7 @@
 		7A32D95C1EFBB09C00CAC191 /* MSCTakeFacePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A32D94B1EFBB09C00CAC191 /* MSCTakeFacePictureView.m */; };
 		7A32D95D1EFBB09C00CAC191 /* MSCTakePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A32D94D1EFBB09C00CAC191 /* MSCTakePictureView.m */; };
 		7A32D95E1EFBB09C00CAC191 /* MSCTakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A32D94F1EFBB09C00CAC191 /* MSCTakePictureViewController.m */; };
+		7A32D9611EFBBE1B00CAC191 /* MSCTakeDriverPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A32D9601EFBBE1B00CAC191 /* MSCTakeDriverPictureView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		7A32D94D1EFBB09C00CAC191 /* MSCTakePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCTakePictureView.m; sourceTree = "<group>"; };
 		7A32D94E1EFBB09C00CAC191 /* MSCTakePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCTakePictureViewController.h; sourceTree = "<group>"; };
 		7A32D94F1EFBB09C00CAC191 /* MSCTakePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCTakePictureViewController.m; sourceTree = "<group>"; };
+		7A32D95F1EFBBE1B00CAC191 /* MSCTakeDriverPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCTakeDriverPictureView.h; sourceTree = "<group>"; };
+		7A32D9601EFBBE1B00CAC191 /* MSCTakeDriverPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCTakeDriverPictureView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				7A32D94B1EFBB09C00CAC191 /* MSCTakeFacePictureView.m */,
 				7A32D94C1EFBB09C00CAC191 /* MSCTakePictureView.h */,
 				7A32D94D1EFBB09C00CAC191 /* MSCTakePictureView.m */,
+				7A32D95F1EFBBE1B00CAC191 /* MSCTakeDriverPictureView.h */,
+				7A32D9601EFBBE1B00CAC191 /* MSCTakeDriverPictureView.m */,
 				7A32D94E1EFBB09C00CAC191 /* MSCTakePictureViewController.h */,
 				7A32D94F1EFBB09C00CAC191 /* MSCTakePictureViewController.m */,
 			);
@@ -364,6 +369,7 @@
 				7A32D95E1EFBB09C00CAC191 /* MSCTakePictureViewController.m in Sources */,
 				7A32D95C1EFBB09C00CAC191 /* MSCTakeFacePictureView.m in Sources */,
 				7A1976561EF11093003F7974 /* main.m in Sources */,
+				7A32D9611EFBBE1B00CAC191 /* MSCTakeDriverPictureView.m in Sources */,
 				7A32D95B1EFBB09C00CAC191 /* MSCTakeBacePictureView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

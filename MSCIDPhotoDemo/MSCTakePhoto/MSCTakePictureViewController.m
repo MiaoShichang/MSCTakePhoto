@@ -11,6 +11,7 @@
 
 #import "MSCTakeFacePictureView.h"
 #import "MSCTakeBacePictureView.h"
+#import "MSCTakeDriverPictureView.h"
 #import "MSCTakePictureView.h"
 
 #import "MSCShowPictureViewController.h"
@@ -215,16 +216,25 @@ typedef void(^lightBlock)();
     {
         self.maskView = [[MSCTakeFacePictureView alloc]initWithFrame:self.previewLayer.frame];
         [self.view addSubview:self.maskView];
+        self.deviceOrientation = AVCaptureVideoOrientationLandscapeRight;
     }
     else if(self.takePictureType == MSCTakePictureTypeBack)
     {
         self.maskView = [[MSCTakeBacePictureView alloc]initWithFrame:self.previewLayer.frame];
         [self.view addSubview:self.maskView];
+        self.deviceOrientation = AVCaptureVideoOrientationLandscapeRight;
+    }
+    else if(self.takePictureType == MSCTakePictureTypeDriver)
+    {
+        self.maskView = [[MSCTakeDriverPictureView alloc]initWithFrame:self.previewLayer.frame];
+        [self.view addSubview:self.maskView];
+        self.deviceOrientation = AVCaptureVideoOrientationLandscapeRight;
     }
     else
     {
         self.maskView = [[MSCTakePictureView alloc]initWithFrame:self.previewLayer.frame];
         [self.view addSubview:self.maskView];
+        self.deviceOrientation = AVCaptureVideoOrientationPortrait;
     }
 }
 
@@ -362,8 +372,10 @@ typedef void(^lightBlock)();
     self.connection = [self.imageOutput connectionWithMediaType:AVMediaTypeVideo];
     
     //获取输出视图的展示方向
-    AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation: self.deviceOrientation];
-    [self.connection setVideoOrientation:avcaptureOrientation];
+//    AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation: AVCaptureVideoOrientationLandscapeRight];
+    
+//    [self.connection setVideoOrientation:self.deviceOrientation];
+    self.connection.videoOrientation = (AVCaptureVideoOrientation)self.deviceOrientation;
     
     __weak typeof(self)wself = self;
     
@@ -392,22 +404,6 @@ typedef void(^lightBlock)();
     }];
 }
 
-#pragma mark -图片方向
-- (AVCaptureVideoOrientation)avOrientationForDeviceOrientation:(UIDeviceOrientation)deviceOrientation
-{
-    AVCaptureVideoOrientation result = (AVCaptureVideoOrientation)deviceOrientation;
-    
-    if ( deviceOrientation == UIDeviceOrientationLandscapeLeft )
-    {
-        result = AVCaptureVideoOrientationLandscapeRight;
-    }
-    else if ( deviceOrientation == UIDeviceOrientationLandscapeRight )
-    {
-        result = AVCaptureVideoOrientationLandscapeLeft;
-    }
-    
-    return result;
-}
 
 - (void)didReceiveMemoryWarning
 {

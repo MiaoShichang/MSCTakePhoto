@@ -14,6 +14,8 @@ typedef NS_ENUM(NSInteger, MSCTakePictureType)
     MSCTakePictureTypePhoto = 0,
     MSCTakePictureTypeFace = 1,
     MSCTakePictureTypeBack = 2,
+    MSCTakePictureTypeDriver = 3,
+    
 };
 
 typedef void (^MSCTakePictureBlock)(BOOL isFinished, NSData *imageData, UIImage *image);
